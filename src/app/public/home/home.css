@@ -1,0 +1,74 @@
+/* src/app/public/home/home.component.css */
+
+.container-concessionaria {
+    padding: 20px;
+    background-color: #f5f5f5; /* Fundo cinza claro */
+}
+
+/* --- Estilo da Barra de Filtros --- */
+.filtro-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.filtro-group {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end; /* Alinha o botão ao input */
+}
+
+/* --- Estilo da Grade de Veículos --- */
+.veiculos-grid {
+    display: grid;
+    /* Configura a grade para ter 1 a 4 colunas dependendo do tamanho da tela */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 30px;
+}
+
+/* --- Estilo dos Cards Individuais --- */
+.veiculo-card {
+    max-width: 350px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Sombra um pouco mais forte */
+    transition: transform 0.3s ease-in-out;
+}
+
+.veiculo-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.veiculo-card img {
+    height: 200px; /* Altura padrão para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+.mat-card-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+}
+
+.mat-card-subtitle {
+    color: #888;
+}
+
+.preco {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff; /* Cor azul de destaque para o preço */
+    margin: 10px 0;
+}
+
+.descricao {
+    color: #555;
+    font-size: 0.9em;
+    height: 3em; /* Limita a altura para uniformidade */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo do botão VER DETALHES */
+.mat-card-actions {
+    text-align: center;
+    padding-bottom: 15px;
+}

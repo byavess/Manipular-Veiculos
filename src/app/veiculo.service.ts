@@ -11,8 +11,8 @@ export interface Veiculo {
   modelo: string;
   ano: number;
   preco: number;
-  quilometragem: number;
   descricao: string;
+  cor: string;  
   urlsFotos: string[]; // O Array de URLs das 7+ fotos
 }
 
