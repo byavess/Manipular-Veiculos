@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
 export interface Veiculo {
+ 
   id: number;
   marca: string;
   modelo: string;
   ano: number;
   preco: number;
   descricao: string;
-  imagem: string;
+  urlsFotos: string[];
   cor?: string;
 }
 
@@ -25,7 +26,7 @@ export class VeiculoService {
 
   // Método SIMPLES para buscar veículos
   getVeiculos(): Observable<Veiculo[]> {
-     console.log('🔍 Testando conexão com backend...');
+     console.log('🔍 Testando conexão com backend...',this.apiUrl);
     return this.http.get<Veiculo[]>(this.apiUrl);
   }
 
